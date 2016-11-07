@@ -21,6 +21,7 @@ static-html                    # Define static page content in .html files
 
 # data
 mongo@1.1.14                   # The database Meteor supports right now
+apollo                         # 🚀 Add Apollo to your Meteor app
 
 # accounts
 accounts-password              # Password support for accounts
