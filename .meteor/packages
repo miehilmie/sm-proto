@@ -6,15 +6,15 @@
 
 # meteor libraries
 meteor-base@1.0.4              # Packages every Meteor app needs to have
-ecmascript@0.5.9               # Enable ECMAScript2015+ syntax in app code
+ecmascript@0.6.1               # Enable ECMAScript2015+ syntax in app code
 es5-shim@4.6.15                # ECMAScript 5 compatibility for older browsers.
-check                          # Check whether a value matches a pattern
+check@1.2.4                          # Check whether a value matches a pattern
 tracker@1.1.1                  # Meteor's client-side reactive programming library
-session                        # Session variable
+session@1.1.7                        # Session variable
 
 # standard libraries
 jquery@1.11.10                 # Helpful client-side library
-less                           # Leaner CSS language
+less@2.7.8                           # Leaner CSS language
 
 # ui
 static-html                    # Define static page content in .html files
@@ -24,19 +24,19 @@ mongo@1.1.14                   # The database Meteor supports right now
 apollo                         # 🚀 Add Apollo to your Meteor app
 
 # accounts
-accounts-password              # Password support for accounts
+accounts-password@1.3.3              # Password support for accounts
 
 # mobile
-crosswalk                      # Makes your Cordova application use the Crosswalk WebView instead of the System WebView on Android
+crosswalk@1.7.0                      # Makes your Cordova application use the Crosswalk WebView instead of the System WebView on Android
 mobile-experience@1.0.4        # Packages for a great mobile UX
 
 # production
 standard-minifier-css@1.3.2    # CSS minifier run for production mode
 standard-minifier-js@1.2.1     # JS minifier run for production mode
-ddp-rate-limiter               # The DDPRateLimiter allows users to add rate limits to DDP methods and subscriptions.
+ddp-rate-limiter@1.0.6               # The DDPRateLimiter allows users to add rate limits to DDP methods and subscriptions.
 
 # testing
 shell-server@0.2.1             # Server-side component of the `meteor shell` command
 
 # security
-audit-argument-checks          # Try to detect inadequate input sanitization
+audit-argument-checks@1.0.7          # Try to detect inadequate input sanitization
