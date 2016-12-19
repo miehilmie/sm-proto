@@ -4,8 +4,6 @@ Upstream repository for Integrated Asset Management System (IAMS)
 
 This is upstream repository for dependency management, testing, etc.
 
-----------
-
 
 Technology Stack
 -------------
@@ -59,7 +57,7 @@ xxx
 xxx
 
 
-----------
+
 
 Tutorial
 -------------
