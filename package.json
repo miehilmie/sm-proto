@@ -80,6 +80,9 @@
       },
       "allowImportExportEverywhere": true
     },
+    "globals": {
+        "window": true
+    },
     "plugins": [
       "meteor",
       "graphql"

@@ -14,7 +14,6 @@ session@1.1.7                        # Session variable
 
 # standard libraries
 jquery@1.11.10                 # Helpful client-side library
-less@2.7.9-beta.1                           # Leaner CSS language
 
 # ui
 static-html                    # Define static page content in .html files
@@ -40,3 +39,5 @@ shell-server@0.2.1             # Server-side component of the `meteor shell` com
 
 # security
 audit-argument-checks@1.0.7          # Try to detect inadequate input sanitization
+fourseven:scss
+less
