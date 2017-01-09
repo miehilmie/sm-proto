@@ -10,7 +10,7 @@ const NavItem = ({
   }) =>
 (
   <li className="nav-item">
-    <Link {...rest} activeClassName="active" className="nav-link" to={to}><i className={['fa', 'fa-'.concat(fa)].join(' ')} /> {children}</Link>
+    <Link {...rest} activeClassName="active" className="nav-link" to={to}><i className={['fa', 'fa-'.concat(fa)].join(' ')} /> <span>{children}</span></Link>
   </li>
 );
 
