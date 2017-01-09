@@ -1,4 +1,5 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../imports/styles/fontawesome/font-awesome";
 
 $orange-color: #FA7252;
 $header-color: #273135;
@@ -15,8 +16,31 @@ $header-color: #273135;
     width: 250px;
     z-index: 1;
 
-    .avatar {
-        min-height: 4rem;
+    #avatar {
+        height: 4.5rem;
+
+        img {
+            position: relative;
+            top: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        #avatar-info {
+            color: #fff;
+            top: 1.3rem;
+            position:relative;
+            .name {
+                font-weight: bold;
+                line-height: 1rem;
+                font-size: 1rem;
+            }
+            .position {
+                font-size: 0.8rem;
+                margin-top: -0.2rem;
+            }
+        }
     }
 
     .nav {
