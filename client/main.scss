@@ -1,64 +1,13 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "../imports/styles/fontawesome/font-awesome";
 
 $orange-color: #FA7252;
 $header-color: #273135;
+$sidebar-font-color: #89949B;
 
 @include bg-variant('.bg-orange', $orange-color);
 @include bg-variant('.bg-dark', $header-color);
 
-#sidebar {
-    left: 0;
-    top: 0;
-    position: fixed;
-    background-color: #273135;
-    min-height: 40rem;
-    width: 250px;
-    z-index: 1;
-
-    #avatar {
-        height: 4.5rem;
-
-        img {
-            position: relative;
-            top: 1rem;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            vertical-align: middle;
-        }
-        #avatar-info {
-            color: #fff;
-            top: 1.3rem;
-            position:relative;
-            .name {
-                font-weight: bold;
-                line-height: 1rem;
-                font-size: 1rem;
-            }
-            .position {
-                font-size: 0.8rem;
-                margin-top: -0.2rem;
-            }
-        }
-    }
-
-    .nav {
-        a {
-            color: #fff;
-
-            &.active {
-                border-left: solid 0.3rem $orange-color;
-                background: #000;
-            }
-        }
-    }
-
-    & ~ #body {
-        margin-left: 250px;
-    }
-
-}
+@import "../imports/ui/stylesheets/components/sidebar";
 
 #navbar {
     width: 100%;

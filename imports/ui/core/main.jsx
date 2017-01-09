@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 
-import { Row, Col } from 'reactstrap';
-
 import Header from './header.jsx';
 import Content from './content.jsx';
 import Sidebar from './sidebar/sidebar.jsx';

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Match } from 'react-router';
-import { Container } from 'reactstrap';
 // import MatchWhenAuthorized from '../components/matchWhenAuthorized.jsx';
 import Home from '../pages/home.jsx';
 import About from '../pages/about.jsx';
