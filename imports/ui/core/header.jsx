@@ -1,36 +1,29 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { NavbarToggler, Collapse, Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import { NavbarBrand, Row, Col } from 'reactstrap';
 
-class Header extends Component {
+const Header = props => (
+  <div id="navbar" className="container-fluid">
+    <div className="row">
+      <div className="col p-0">
+        <nav id="navbar-default" className="navbar navbar-inverse bg-dark">
+          <div className="row">
+            <div className="col-3 p-0">
+              <button className="btn btn-default" onClick={props.toggle}>X</button>
+            </div>
+            <div className="col-6 col-sm-4">
+              <NavbarBrand tag={Link} to="/">SPS</NavbarBrand>
+            </div>
+            <div className="col-3 col-sm-5">
+              Logout
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-  constructor(props) {
-    super(props);
-    this.toggleNavbar = this.toggleNavbar.bind(this);
-
-    this.state = {
-      collapsed: true,
-    };
-  }
-
-  toggleNavbar() {
-    this.setState({
-      collapsed: !this.state.collapsed,
-    });
-  }
-
-  render() {
-    return (
-      <Navbar color="faded" light>
-        <NavbarToggler className="float-sm-right hidden-lg-up collapsed" onClick={this.toggleNavbar} />
-        <Collapse className="navbar-toggleable-md" isOpen={!this.state.collapsed}>
-          <NavbarBrand tag={Link} to="/">SPS</NavbarBrand>
-        </Collapse>
-      </Navbar>
-
-    );
-  }
-}
+);
 
 export default Header;
 

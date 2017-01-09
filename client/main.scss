@@ -1,7 +1,60 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.sidebar {
-    .nav {
-        background: red;
+$orange-color: #FA7252;
+$header-color: #273135;
+
+@include bg-variant('.bg-orange', $orange-color);
+@include bg-variant('.bg-dark', $header-color);
+
+#sidebar {
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: #273135;
+    min-height: 40rem;
+    width: 250px;
+    z-index: 1;
+
+    .avatar {
+        min-height: 4rem;
     }
+
+    .nav {
+        a {
+            color: #fff;
+
+            &.active {
+                border-left: solid 0.3rem $orange-color;
+                background: #000;
+            }
+        }
+    }
+
+    & ~ #body {
+        margin-left: 250px;
+    }
+
+}
+
+#navbar {
+    width: 100%;
+}
+
+#navbar-default {
+    margin-left: 250px;
+}
+
+.open {
+
+    #sidebar {
+        width: 0;
+        & ~ #body {
+            margin-left: 0;
+        }
+    }
+
+    #navbar-default {
+        margin-left: 0;
+    }
+
 }
