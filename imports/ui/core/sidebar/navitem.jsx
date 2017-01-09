@@ -13,7 +13,7 @@ const NavItem = ({
     {({ onClick, href, isActive }) => (
       <li className={['nav-link', isActive ? 'active' : null].join(' ')}>
         <a href={href} onClick={onClick}>
-          <i className={['fa', 'fa-'.concat(fa)].join(' ')} /> <span>{children}</span>
+          <i className={['fa', 'fa-'.concat(fa)].join(' ')} /><span>{children}</span>
         </a>
       </li>
     )}

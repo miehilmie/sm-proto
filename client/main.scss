@@ -3,6 +3,7 @@
 $orange-color: #FA7252;
 $header-color: #273135;
 $sidebar-font-color: #89949B;
+$sidebar-width: 250px;
 
 @include bg-variant('.bg-orange', $orange-color);
 @include bg-variant('.bg-dark', $header-color);
@@ -14,7 +15,7 @@ $sidebar-font-color: #89949B;
 }
 
 #navbar-default {
-    margin-left: 250px;
+    margin-left: $sidebar-width;
 }
 
 .open {
