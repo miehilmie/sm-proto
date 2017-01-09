@@ -8,11 +8,12 @@ class Sidebar extends Component {
   menus = [
     {
       header: true,
-      text: 'Dashboard',
+      text: 'Penerimaan',
     },
     {
       text: 'Dashboard',
       fa: 'calendar',
+      to: '/home',
     },
     {
       submodules: true,
@@ -22,6 +23,25 @@ class Sidebar extends Component {
         { to: '/about', fa: 'user', text: 'About' },
         { to: '/test', fa: 'book', text: 'Submodule 2' },
         { to: '/test2', fa: 'car', text: 'Submodule 3' },
+      ],
+    },
+    {
+      header: true,
+      text: 'Permohonan',
+    },
+    {
+      text: 'Dashboard',
+      fa: 'calendar',
+      to: '/dashboard',
+    },
+    {
+      submodules: true,
+      text: 'Permohonan',
+      fa: 'book',
+      subs: [
+        { to: '/permohonan', fa: 'user', text: 'Mohon' },
+        { to: '/permohonan/senarai', fa: 'book', text: 'Senarai' },
+        { to: '/permohonan/status', fa: 'car', text: 'Semak Status' },
       ],
     },
   ];

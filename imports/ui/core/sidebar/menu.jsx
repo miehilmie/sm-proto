@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 import NavItem from './navitem.jsx';
 import Submenu from './submenu.jsx';
@@ -11,19 +11,19 @@ class Menu extends Component {
   }
 
   getMenus() {
-    return this.props.menus.map((menu) => {
+    return this.props.menus.map((menu, index) => {
       if (menu.submodules) {
         return (
-          <Submenu item={menu} />
+          <Submenu key={index} item={menu} />
         );
       } else if (menu.header) {
         return (
-          <Header item={menu} />
+          <Header key={index} item={menu} />
         );
       }
 
       return (
-        <NavItem to="/" activeOnlyWhenExact fa={menu.fa}>{menu.text}</NavItem>
+        <NavItem key={index} to={menu.to} activeOnlyWhenExact fa={menu.fa}>{menu.text}</NavItem>
       );
     });
   }
@@ -31,11 +31,27 @@ class Menu extends Component {
 
   render() {
     return (
-      <ul className="sidbar-nav nav flex-column">
-        {this.getMenus()}
-      </ul>
+      <div id="sidebar-container">
+        <div className="sidebar">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col">
+                <div className="sidebar-nav-container">
+                  <ul className="sidebar-nav nav flex-column">
+                    {this.getMenus()}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   }
 }
+
+Menu.propTypes = {
+  menus: PropTypes.array.isRequired,
+};
 
 export default Menu;

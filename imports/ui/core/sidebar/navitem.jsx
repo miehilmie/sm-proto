@@ -9,9 +9,15 @@ const NavItem = ({
     ...rest
   }) =>
 (
-  <li className="nav-item">
-    <Link {...rest} activeClassName="active" className="nav-link" to={to}><i className={['fa', 'fa-'.concat(fa)].join(' ')} /> <span>{children}</span></Link>
-  </li>
+  <Link {...rest} to={to}>
+    {({ onClick, href, isActive }) => (
+      <li className={['nav-link', isActive ? 'active' : null].join(' ')}>
+        <a href={href} onClick={onClick}>
+          <i className={['fa', 'fa-'.concat(fa)].join(' ')} /> <span>{children}</span>
+        </a>
+      </li>
+    )}
+  </Link>
 );
 
 NavItem.propTypes = {

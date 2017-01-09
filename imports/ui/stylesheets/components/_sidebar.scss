@@ -1,11 +1,15 @@
 #sidebar {
-    left: 0;
     top: 0;
-    position: fixed;
-    background-color: #273135;
-    min-height: 40rem;
-    width: 250px;
+    bottom: 0;
     z-index: 1;
+    position: fixed;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    // left: -250px;
+    left: 0;
+    width: 250px;
+    background: #273135;
 
     #avatar {
         height: 4.5rem;
@@ -45,31 +49,99 @@
         font-weight: bold;
     }
 
-    .sidbar-nav {
-        > li {
-            > ul {
-                margin-left: 1.5rem;
+    #sidebar-container {
+        bottom: 0;
+        width: 250px;
+        overflow: hidden;
+        position: absolute;
+        top: 4.5rem;
+
+        .sidebar {
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: absolute;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+
+    }
+
+    .sidebar-nav-container {
+        > .sidebar-nav {
+            padding: 0;
+            border: none;
+            margin: 0 -15px 0 -15px;
+
+
+            > li {
+                &:before {
+                    display: none
+                }
             }
-            a {
+
+        }
+    }
+
+
+    .sidebar-nav {
+        margin-left: 1.5rem;
+        border-left: 1px solid rgba(59,70,72,0.5);
+
+        > li {
+            padding: 0;
+            outline: none;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+
+
+            &:before {
+                left: 0;
+                top: 22px;
+                width: 15px;
+                content: ' ';
+                position: absolute;
+                display: inline-block;
+                border: 1px solid rgba(59,70,72,0.5);
+            }
+
+            &.active {
+                background: rgba(0,0,0,0.2);
+
+                a {
+                    border-left: solid 0.3rem $orange-color;
+                    padding-left: 1rem;
+                }
+
+                &:before {
+                    display: none
+                }
+
+            }
+
+
+
+            > a {
+                text-decoration: none;
+                padding: 1rem 1.3rem;
+                display: block;
                 color: $sidebar-font-color;
                 font-size: 1rem;
-                padding: 1rem 1.3rem;
                 line-height: 1;
 
                 span {
                     margin-left: 1rem;
                 }
 
-                &.active {
-                    border-left: solid 0.3rem $orange-color;
-                    padding-left: 1rem;
+                &:hover {
                     background: rgba(0,0,0,0.2);
-
-
                 }
             }
         }
-
     }
 
     & ~ #body {

@@ -9,8 +9,8 @@ class Menu extends Component {
   }
 
   getMenus() {
-    return this.props.item.subs.map((menu) => (
-      <NavItem to={menu.to} activeOnlyWhenExact fa={menu.fa}>{menu.text}</NavItem>
+    return this.props.item.subs.map((menu, index) => (
+      <NavItem key={index} to={menu.to} activeOnlyWhenExact fa={menu.fa}>{menu.text}</NavItem>
     ));
   }
 
@@ -18,7 +18,7 @@ class Menu extends Component {
     return (
       <li className="nav-item">
         <a className="nav-link" href="#"><i className={['fa', 'fa-'.concat(this.props.item.fa)].join(' ')} /><span>{this.props.item.text}</span></a>
-        <ul className="sidbar-nav nav flex-column">
+        <ul className="sidebar-nav nav flex-column">
           {this.getMenus()}
         </ul>
       </li>
