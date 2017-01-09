@@ -1,23 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
-import { NavbarBrand, Row, Col } from 'reactstrap';
 
-const Header = props => (
+const Header = () => (
   <div id="navbar" className="container-fluid">
     <div className="row">
       <div className="col p-0">
-        <nav id="navbar-default" className="navbar navbar-inverse bg-dark">
-          <div className="row">
-            <div className="col-3 p-0">
-              <button className="btn btn-default" onClick={props.toggle}>X</button>
-            </div>
-            <div className="col-6 col-sm-4">
-              <NavbarBrand tag={Link} to="/">SPS</NavbarBrand>
-            </div>
-            <div className="col-3 col-sm-5">
-              Logout
-            </div>
-          </div>
+        <nav id="navbar-default" className="navbar navbar-toggleable-md navbar-inverse bg-dark">
+          <Link className="navbar-brand" to="/">SPS</Link>
         </nav>
       </div>
     </div>
