@@ -12,7 +12,7 @@
     background: #273135;
 
     #avatar {
-        height: 4.5rem;
+        height: $avatar-height;
 
         img {
             position: relative;
@@ -62,7 +62,7 @@
         width: $sidebar-width;
         overflow: hidden;
         position: absolute;
-        top: 4.5rem;
+        top: $avatar-height;
 
         .sidebar {
             top: 0;

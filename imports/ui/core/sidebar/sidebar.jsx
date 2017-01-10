@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-
 import Avatar from './avatar.jsx';
 import Menu from './menu.jsx';
 

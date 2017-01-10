@@ -4,6 +4,7 @@ $orange-color: #FA7252;
 $header-color: #273135;
 $sidebar-font-color: #89949B;
 $sidebar-width: 250px;
+$avatar-height: 5rem;
 
 @include bg-variant('.bg-orange', $orange-color);
 @include bg-variant('.bg-dark', $header-color);

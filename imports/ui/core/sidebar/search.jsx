@@ -1,15 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 
-class Search extends Component {
-  render() {
-    return (
-      <input type="text" placeholder="Search..." onChange={this.props.search} className="sidebar-search form-control" />
-    );
-  }
-}
+const Search = props => (
+  <input type="text" placeholder="Search..." onChange={props.search} className="sidebar-search form-control" />
+);
 
 Search.propTypes = {
-
+  search: PropTypes.func.isRequired,
 };
 
 export default Search;
